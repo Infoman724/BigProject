@@ -8,7 +8,7 @@ import babel from '@rollup/plugin-babel';
 import { terser } from 'rollup-plugin-terser';
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
-import copy from 'rollup-plugin-copy'
+//import copy from 'rollup-plugin-copy';
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
@@ -24,16 +24,17 @@ export default {
 		input: config.client.input(),
 		output: config.client.output(),
 		plugins: [
-			copy({
-				targets: [{
-					src: 'node_modules/bootstrap/dist/**/*',
-					dest: 'static/vendor/bootstrap'
-				},{
-					src: 'node_modules/jquery/dist/**/*',
-					dest: 'static/vendor/jquery'
-				}]
-
-			}),
+			//copy({
+			//	targets: [{
+			//		src: 'node_modules/bootstrap/jquery/**/*',
+			//		dest: 'static/vendor/bootstrap'
+			//	}, {
+			//		targets: [{
+			//			src: 'node_modules/bootstrap/jquery/**/*',
+			//			dest: 'static/vendor/jquery'
+			//		}]
+			//	}]
+			//}),
 			replace({
 				preventAssignment: true,
 				values:{

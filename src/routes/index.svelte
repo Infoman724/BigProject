@@ -1,7 +1,6 @@
 <script>
-	import cat from 'images/cat.jpg';
+	import kid from 'images/successkid.jpg';
 </script>
-
 <style>
 	h1, figure, p {
 		text-align: center;
@@ -13,6 +12,7 @@
 		text-transform: uppercase;
 		font-weight: 700;
 		margin: 0 0 0.5em 0;
+
 	}
 
 	figure {
@@ -37,14 +37,11 @@
 </style>
 
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>Svelte</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<h1>YAAAAY!!!!!!!!</h1>
 
 <figure>
-	<img alt="Cat" src="{cat}">
-	<figcaption>Have fun with Sapper!</figcaption>
+	<img alt="kid" src="{kid}">
 </figure>
-
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
