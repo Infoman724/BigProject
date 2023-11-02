@@ -1,6 +1,9 @@
 <script>
-	import cat from 'images/cat.jpg';
+	import { stores } from '@sapper/app';
+	const { session } = stores();
+    import successkid from 'images/successkid.jpg'
 </script>
+
 
 <style>
 	h1, figure, p {
@@ -37,14 +40,17 @@
 </style>
 
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>Svelte</title>
 </svelte:head>
 
-<h1>Great success!</h1>
-
-<figure>
-	<img alt="Cat" src="{cat}">
-	<figcaption>Have fun with Sapper!</figcaption>
-</figure>
-
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+{#if $session.token}
+	<h1>Добро пожаловать!</h1>
+	<figure>
+		<img alt="Success Kid" src="https://www.seekpng.com/png/detail/138-1387775_login-to-do-whatever-you-want-login-icon.png">
+	</figure>
+{:else}
+	<h1>Всё работает корректно!</h1>
+	<figure>
+        <img alt="successkid" src="{successkid}">
+	</figure>
+{/if}
