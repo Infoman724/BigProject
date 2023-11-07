@@ -2,7 +2,7 @@
 	import kid from 'images/successkid.jpg';
 </script>
 <style>
-	h1, figure, p {
+	h1, figure {
 		text-align: center;
 		margin: 0 auto;
 	}
@@ -25,9 +25,7 @@
 		margin: 0 0 1em 0;
 	}
 
-	p {
-		margin: 1em auto;
-	}
+
 
 	@media (min-width: 480px) {
 		h1 {
