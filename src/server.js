@@ -16,7 +16,7 @@ polka()
 		json(),
 		sirv('static', { dev }),
 		session({
-			secret: 'webpage',
+			secret: 'shops',
 			resave: false,
 			saveUninitialized: true,
 			cookie: {

@@ -1,10 +1,6 @@
 <script>
-	import { stores } from '@sapper/app';
-	const { session } = stores();
-    import successkid from 'images/successkid.jpg'
+	import kid from 'images/successkid.jpg';
 </script>
-
-
 <style>
 	h1, figure, p {
 		text-align: center;
@@ -16,6 +12,7 @@
 		text-transform: uppercase;
 		font-weight: 700;
 		margin: 0 0 0.5em 0;
+
 	}
 
 	figure {
@@ -43,14 +40,8 @@
 	<title>Svelte</title>
 </svelte:head>
 
-{#if $session.token}
-	<h1>Добро пожаловать!</h1>
-	<figure>
-		<img alt="Success Kid" src="https://www.seekpng.com/png/detail/138-1387775_login-to-do-whatever-you-want-login-icon.png">
-	</figure>
-{:else}
-	<h1>Всё работает корректно!</h1>
-	<figure>
-        <img alt="successkid" src="{successkid}">
-	</figure>
-{/if}
+<h1>YAAAAY!!!!!!!!</h1>
+
+<figure>
+	<img alt="kid" src="{kid}">
+</figure>

@@ -1,11 +1,10 @@
 <script context="module">
-    export async function preload( { params }, { token }){
-        if (token){
-            this.redirect(302, "/overview");
+    export async function preload({ params }, { user }) {
+        if (user) {
+            this.redirect(302, `/`);
         }
     }
 </script>
-
 <script>
     import { goto, stores } from '@sapper/app';
     import { post } from 'utils.js';
@@ -18,15 +17,16 @@
     async function submit(event) {
         const response = await post(`auth/login`, { username, password });
         error = response.error;
+        console.log(response);
         if (response.token) {
             $session.token = response.token;
-            goto('/overview');
+            goto('/');
         }
     }
 </script>
 
 <svelte:head>
-    <title>Sign in WebPage</title>
+    <title>Sign in • Shop</title>
 </svelte:head>
 
 <div class="auth-page">
